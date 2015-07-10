@@ -80,7 +80,8 @@ C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.dll
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.pdb
 C:\Users\cpatterson\Working\Github\Queso\Queso\bin\EntityFramework.SqlServer.dll
 C:\Users\cpatterson\Working\Github\Queso\Queso\bin\EntityFramework.SqlServer.xml
-C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.InitialCreate.resources
+C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.initial.resources
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.csproj.GenerateResource.Cache
-C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.addactivetousers.resources
-C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.creatednewmodels.resources
+C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.addboardtask.resources
+C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.addboardtaskmodel.resources
+C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.addboardtaskmodelset.resources
