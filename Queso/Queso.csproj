@@ -187,24 +187,30 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BoardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507100000187_InitialCreate.cs" />
-    <Compile Include="Migrations\201507100000187_InitialCreate.Designer.cs">
-      <DependentUpon>201507100000187_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201507100551154_initial.cs" />
+    <Compile Include="Migrations\201507100551154_initial.Designer.cs">
+      <DependentUpon>201507100551154_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507100002059_add-active-to-users.cs" />
-    <Compile Include="Migrations\201507100002059_add-active-to-users.Designer.cs">
-      <DependentUpon>201507100002059_add-active-to-users.cs</DependentUpon>
+    <Compile Include="Migrations\201507100600282_add-board-task.cs" />
+    <Compile Include="Migrations\201507100600282_add-board-task.Designer.cs">
+      <DependentUpon>201507100600282_add-board-task.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507100015212_created-new-models.cs" />
-    <Compile Include="Migrations\201507100015212_created-new-models.Designer.cs">
-      <DependentUpon>201507100015212_created-new-models.cs</DependentUpon>
+    <Compile Include="Migrations\201507100610386_add-boardtask-model.cs" />
+    <Compile Include="Migrations\201507100610386_add-boardtask-model.Designer.cs">
+      <DependentUpon>201507100610386_add-boardtask-model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507100612371_add-boardtask-model-set.cs" />
+    <Compile Include="Migrations\201507100612371_add-boardtask-model-set.Designer.cs">
+      <DependentUpon>201507100612371_add-boardtask-model-set.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Answer.cs" />
+    <Compile Include="Models\BoardTask.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Models\QuesoContext.cs" />
     <Compile Include="Models\Board.cs" />
@@ -326,6 +332,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Board\Index.cshtml" />
+    <Content Include="Views\Board\Show.cshtml" />
+    <Content Include="Views\Board\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -338,14 +347,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201507100000187_InitialCreate.resx">
-      <DependentUpon>201507100000187_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201507100551154_initial.resx">
+      <DependentUpon>201507100551154_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201507100002059_add-active-to-users.resx">
-      <DependentUpon>201507100002059_add-active-to-users.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201507100600282_add-board-task.resx">
+      <DependentUpon>201507100600282_add-board-task.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201507100015212_created-new-models.resx">
-      <DependentUpon>201507100015212_created-new-models.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201507100610386_add-boardtask-model.resx">
+      <DependentUpon>201507100610386_add-boardtask-model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507100612371_add-boardtask-model-set.resx">
+      <DependentUpon>201507100612371_add-boardtask-model-set.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

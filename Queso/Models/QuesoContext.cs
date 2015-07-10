@@ -14,5 +14,6 @@ namespace Queso.Models
         public virtual DbSet<Board> Boards { get; set; }
         public virtual DbSet<Task> Tasks { get; set; }
         public virtual DbSet<Answer> Answers { get; set; }
+        public virtual DbSet<BoardTask> BoardTasks { get; set; }
     }
 }

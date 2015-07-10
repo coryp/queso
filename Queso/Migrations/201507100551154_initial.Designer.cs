@@ -7,13 +7,13 @@ namespace Queso.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addactivetousers : IMigrationMetadata
+    public sealed partial class initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addactivetousers));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201507100002059_add-active-to-users"; }
+            get { return "201507100551154_initial"; }
         }
         
         string IMigrationMetadata.Source

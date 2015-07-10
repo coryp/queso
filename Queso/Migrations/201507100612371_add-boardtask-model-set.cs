@@ -3,25 +3,23 @@ namespace Queso.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class addboardtaskmodelset : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Users",
+                "dbo.BoardTasks",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
+                        BoardTaskID = c.Int(nullable: false, identity: true),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.BoardTaskID);
             
         }
         
         public override void Down()
         {
-            DropTable("dbo.Users");
+            DropTable("dbo.BoardTasks");
         }
     }
 }

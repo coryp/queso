@@ -7,13 +7,13 @@ namespace Queso.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class creatednewmodels : IMigrationMetadata
+    public sealed partial class addboardtaskmodel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(creatednewmodels));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addboardtaskmodel));
         
         string IMigrationMetadata.Id
         {
-            get { return "201507100015212_created-new-models"; }
+            get { return "201507100610386_add-boardtask-model"; }
         }
         
         string IMigrationMetadata.Source

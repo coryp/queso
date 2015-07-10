@@ -3,7 +3,7 @@ namespace Queso.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class creatednewmodels : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
@@ -11,39 +11,51 @@ namespace Queso.Migrations
                 "dbo.Answers",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        AnswerID = c.Int(nullable: false, identity: true),
                         CreatedAt = c.DateTime(nullable: false),
                         CaseNumber = c.String(),
                         Message = c.String(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.AnswerID);
             
             CreateTable(
                 "dbo.Boards",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        BoardID = c.Int(nullable: false, identity: true),
                         CreatedAt = c.DateTime(nullable: false),
                         EndedAt = c.DateTime(nullable: false),
                         Active = c.Boolean(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.BoardID);
             
             CreateTable(
                 "dbo.Tasks",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        TaskID = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                         Active = c.Boolean(nullable: false),
                         Challenge = c.Boolean(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.TaskID);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        UserID = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        Active = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.UserID);
             
         }
         
         public override void Down()
         {
+            DropTable("dbo.Users");
             DropTable("dbo.Tasks");
             DropTable("dbo.Boards");
             DropTable("dbo.Answers");

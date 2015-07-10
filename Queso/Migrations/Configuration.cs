@@ -10,7 +10,6 @@ namespace Queso.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Queso.Models.QuesoContext";
         }
 
         protected override void Seed(Queso.Models.QuesoContext context)
