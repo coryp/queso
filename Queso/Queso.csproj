@@ -22,6 +22,13 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -208,6 +215,18 @@
     <Compile Include="Migrations\201507100612371_add-boardtask-model-set.Designer.cs">
       <DependentUpon>201507100612371_add-boardtask-model-set.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201507232220125_no0-idea.cs" />
+    <Compile Include="Migrations\201507232220125_no0-idea.Designer.cs">
+      <DependentUpon>201507232220125_no0-idea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507232252170_answer-to-boardtask.cs" />
+    <Compile Include="Migrations\201507232252170_answer-to-boardtask.Designer.cs">
+      <DependentUpon>201507232252170_answer-to-boardtask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507232301352_more-relationships.cs" />
+    <Compile Include="Migrations\201507232301352_more-relationships.Designer.cs">
+      <DependentUpon>201507232301352_more-relationships.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\BoardTask.cs" />
@@ -285,6 +304,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Icon.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -358,6 +378,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201507100612371_add-boardtask-model-set.resx">
       <DependentUpon>201507100612371_add-boardtask-model-set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507232220125_no0-idea.resx">
+      <DependentUpon>201507232220125_no0-idea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507232252170_answer-to-boardtask.resx">
+      <DependentUpon>201507232252170_answer-to-boardtask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507232301352_more-relationships.resx">
+      <DependentUpon>201507232301352_more-relationships.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

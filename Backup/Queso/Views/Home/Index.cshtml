@@ -1,0 +1,9 @@
+﻿@model List<Queso.Models.User>
+    
+
+<select name="id">
+    @foreach (var user in Model)
+    {
+        <option value="@user.UserID">@user.Name</option>
+    }
+</select>

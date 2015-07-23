@@ -1,9 +1,10 @@
-﻿@model List<Queso.Models.User>
-    
+﻿    
+    <h3>@Model.Name</h3>
+    <ul>
+        @foreach (var answer in Model.Answers)
+        {
+            <li>@answer.Message</li>
+        }
+    </ul>
 
-<select name="id">
-    @foreach (var user in Model)
-    {
-        <option value="@user.UserID">@user.Name</option>
-    }
-</select>
+

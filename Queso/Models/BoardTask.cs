@@ -8,9 +8,14 @@ namespace Queso.Models
     {
         public BoardTask()
         {
+            Answers = new HashSet<Answer>();
         }
 
         [Key]
         public int BoardTaskID { get; set; }
+
+        public virtual ICollection<Answer> Answers { get; set; }
+        public virtual Task Task { get; set; }
+        public virtual Board Board { get; set; }
     }
 }

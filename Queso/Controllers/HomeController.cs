@@ -12,13 +12,24 @@ namespace Queso.Controllers
     {
         public ActionResult Index()
         {
-            List<User> users;
+            User user;
+            var answer = new Answer()
+            {
+                Message = "hi mom",
+                CreatedAt = DateTime.Now,
+                CaseNumber = "2323322"
+            };
+
             using (var db = new QuesoContext())
             {
-                users = db.Users.ToList();
-                ViewBag.Users = users;
+                user = db.Users.Where(x => x.UserID == 1).FirstOrDefault();
+                user.Answers.Add(answer);
+                db.SaveChanges();
+
+                ViewBag.User = user;
             }
-            return View(users);
+
+            return View(user);
         }
     }
 }

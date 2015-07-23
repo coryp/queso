@@ -8,6 +8,8 @@ namespace Queso.Models
     {
         public Board()
         {
+            BoardTasks = new HashSet<BoardTask>();
+            Answers = new HashSet<Answer>();
         }
 
         [Key]
@@ -15,5 +17,9 @@ namespace Queso.Models
         public DateTime CreatedAt { get; set; }
         public DateTime EndedAt { get; set; }
         public bool Active { get; set; }
+
+
+        public virtual ICollection<BoardTask> BoardTasks { get; set; }
+        public virtual ICollection<Answer> Answers { get; set; }
     }
 }

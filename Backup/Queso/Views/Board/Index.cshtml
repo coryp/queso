@@ -1,0 +1,13 @@
+﻿@model Queso.Models.Board
+
+@{
+    ViewBag.Title = "title";
+}
+
+@if (Model == null)
+{
+    @Html.Raw("No boards found")
+    return;
+}
+
+<h2>@Model.BoardID</h2>

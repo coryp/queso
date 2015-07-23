@@ -7,12 +7,18 @@ namespace Queso.Models
 {
     public class Task
     {
+        public Task ()
+        {
+            BoardTasks = new HashSet<BoardTask>();
+        }
+
         [Key]
         public int TaskID { get; set; }
         public string Name { get; set; }
         public bool Active { get; set; }
         public bool Challenge { get; set; }
 
+        public virtual ICollection<BoardTask> BoardTasks { get; set; }
 
         public static List<Task> Random(int count=24)
         {
