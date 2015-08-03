@@ -227,6 +227,14 @@
     <Compile Include="Migrations\201507232301352_more-relationships.Designer.cs">
       <DependentUpon>201507232301352_more-relationships.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201507232322367_another-unknown.cs" />
+    <Compile Include="Migrations\201507232322367_another-unknown.Designer.cs">
+      <DependentUpon>201507232322367_another-unknown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507232354251_made-board-dates-nullable.cs" />
+    <Compile Include="Migrations\201507232354251_made-board-dates-nullable.Designer.cs">
+      <DependentUpon>201507232354251_made-board-dates-nullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\BoardTask.cs" />
@@ -387,6 +395,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201507232301352_more-relationships.resx">
       <DependentUpon>201507232301352_more-relationships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507232322367_another-unknown.resx">
+      <DependentUpon>201507232322367_another-unknown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507232354251_made-board-dates-nullable.resx">
+      <DependentUpon>201507232354251_made-board-dates-nullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

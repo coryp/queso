@@ -14,8 +14,9 @@ namespace Queso.Models
 
         [Key]
         public int BoardID { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime EndedAt { get; set; }
+        
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? EndedAt { get; set; }
         public bool Active { get; set; }
 
 

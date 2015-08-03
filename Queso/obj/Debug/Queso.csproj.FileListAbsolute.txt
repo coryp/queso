@@ -94,3 +94,5 @@ C:\Users\cpatterson\Working\Github\Queso\Queso\bin\System.Web.Http.WebHost.xml
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.no0idea.resources
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.answertoboardtask.resources
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.morerelationships.resources
+C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.anotherunknown.resources
+C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.madeboarddatesnullable.resources

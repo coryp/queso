@@ -9,15 +9,12 @@ namespace Queso.Controllers
 {
     public class BoardController : Controller
     {
-        private QuesoContext db 
-        { 
-            get { return new QuesoContext(); }
-        }
+                  
         private Board board { get; set; }
 
         public ActionResult Index()
         {
-            using (db)
+            using (var db = new QuesoContext())
             {
                 board = db.Boards.OrderBy(x => x.BoardID).FirstOrDefault();
             }
@@ -26,7 +23,7 @@ namespace Queso.Controllers
 
         public ActionResult Show(int id)
         {
-            using (db)
+            using (var db = new QuesoContext())
             {
                 board = db.Boards.Find(id);
             }
@@ -35,19 +32,31 @@ namespace Queso.Controllers
 
         public ActionResult New()
         {
+            using (var db = new QuesoContext())
+            {
+                board = new Board();
+                board.Active = true;
+    
+
+                var tasks = Task.Random(24);
+                foreach (var task in tasks)
+                {
+                    var boardTask = new BoardTask()
+                    {
+                        Task = task
+                    };
+                    board.BoardTasks.Add(boardTask);
+                }
+                db.Boards.Add(board);
+                db.SaveChanges();
+            }
             return View();
         }
 
         [HttpPost]
-        public ActionResult Create(Board board)
+        public ActionResult Create()
         {
-            //board.Tasks = Task.Random(24);
-            using (db)
-            {
-                db.Boards.Add(board);
-                db.SaveChanges();
-            }
-            return RedirectToAction("/Boards/Show?" + board.BoardID);
+            return null;
         }
     }
 }
