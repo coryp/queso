@@ -12,7 +12,6 @@ namespace Queso.Models
         public string Message { get; set; }
 
         public virtual User User { get; set; }
-        public virtual BoardTask BoardTask { get; set; }
-        public virtual Board Board { get; set; }
+        public virtual Task Task { get; set; }
     }
 }

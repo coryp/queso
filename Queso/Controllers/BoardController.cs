@@ -16,16 +16,17 @@ namespace Queso.Controllers
         {
             using (var db = new QuesoContext())
             {
-                board = db.Boards.OrderBy(x => x.BoardID).FirstOrDefault();
+                board = db.Boards.OrderByDescending(x => x.BoardID).FirstOrDefault();
             }
-            return View(board);
+            return Redirect("/Board/Show/" + board.BoardID);
         }
 
         public ActionResult Show(int id)
         {
             using (var db = new QuesoContext())
             {
-                board = db.Boards.Find(id);
+                //board = db.Boards.Find(id);
+                board = db.Boards.Include("Tasks").Where(x => x.BoardID == id).FirstOrDefault();
             }
             return View(board);
         }
@@ -38,14 +39,15 @@ namespace Queso.Controllers
                 board.Active = true;
     
 
-                var tasks = Task.Random(24);
-                foreach (var task in tasks)
+                var poolTasks = TaskPool.Random();
+                foreach (var poolTask in poolTasks)
                 {
-                    var boardTask = new BoardTask()
+                    var task = new Task()
                     {
-                        Task = task
+                        Name = poolTask.Name,
+                        Challenge = poolTask.Challenge                        
                     };
-                    board.BoardTasks.Add(boardTask);
+                    board.Tasks.Add(task);
                 }
                 db.Boards.Add(board);
                 db.SaveChanges();

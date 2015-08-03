@@ -1,8 +1,10 @@
-﻿@model dynamic
-
-@{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
-}
-
-<h2>title</h2>
+﻿
+<h2>
+    @Model.BoardID
+</h2>
+<ul>
+    @foreach (var task in Model.Tasks)
+    {
+        <li>@task.Name</li>
+    }
+</ul>

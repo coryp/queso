@@ -1,8 +1,6 @@
-﻿@model Queso.Models.Board
+﻿Model Queso.Models.Board
 
-@{
-    ViewBag.Title = "title";
-}
+
 
 @if (Model == null)
 {
@@ -10,4 +8,6 @@
     return;
 }
 
-<h2>@Model.BoardID</h2>
+<h2>
+    @Model.BoardID
+</h2>

@@ -96,3 +96,6 @@ C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.answer
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.morerelationships.resources
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.anotherunknown.resources
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.madeboarddatesnullable.resources
+C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.removedboardtasks.resources
+C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.createdtaskpool.resources
+C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.answertotask.resources

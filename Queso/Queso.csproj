@@ -235,12 +235,24 @@
     <Compile Include="Migrations\201507232354251_made-board-dates-nullable.Designer.cs">
       <DependentUpon>201507232354251_made-board-dates-nullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201508032153449_removed-board-tasks.cs" />
+    <Compile Include="Migrations\201508032153449_removed-board-tasks.Designer.cs">
+      <DependentUpon>201508032153449_removed-board-tasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508032225475_created-task-pool.cs" />
+    <Compile Include="Migrations\201508032225475_created-task-pool.Designer.cs">
+      <DependentUpon>201508032225475_created-task-pool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508032242158_answer-to-task.cs" />
+    <Compile Include="Migrations\201508032242158_answer-to-task.Designer.cs">
+      <DependentUpon>201508032242158_answer-to-task.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Answer.cs" />
-    <Compile Include="Models\BoardTask.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Models\QuesoContext.cs" />
     <Compile Include="Models\Board.cs" />
+    <Compile Include="Models\TaskPool.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -401,6 +413,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201507232354251_made-board-dates-nullable.resx">
       <DependentUpon>201507232354251_made-board-dates-nullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508032153449_removed-board-tasks.resx">
+      <DependentUpon>201508032153449_removed-board-tasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508032225475_created-task-pool.resx">
+      <DependentUpon>201508032225475_created-task-pool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508032242158_answer-to-task.resx">
+      <DependentUpon>201508032242158_answer-to-task.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
