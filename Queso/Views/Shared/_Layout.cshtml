@@ -3,11 +3,19 @@
     <head>
         <title>@Page.Title</title>
         @RenderSection("head", required: false)
+        @Styles.Render("~/Content/bootstrap")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
     </head>
     <body>
-        <h1>QUESO</h1>
+        @Html.Partial("_navbar")
+        <div class="container">
+            <div class="col-lg-12" >
         
-
-        @RenderBody()
+                @RenderBody()
+            </div>
+            
+            
+        </div>
     </body>
 </html>

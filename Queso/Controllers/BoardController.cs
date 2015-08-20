@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DotNetOpenAuth.Messaging;
 using Queso.Models;
 
 namespace Queso.Controllers
@@ -27,6 +28,16 @@ namespace Queso.Controllers
             {
                 //board = db.Boards.Find(id);
                 board = db.Boards.Include("Tasks").Where(x => x.BoardID == id).FirstOrDefault();
+
+                if (board != null)
+                {
+                    var temp = board.Tasks.ToList();
+                    board.Tasks = new List<Task>();
+
+                    board.Tasks.AddRange(temp.GetRange(0,12));
+                    board.Tasks.Add(temp.Last());
+                    board.Tasks.AddRange(temp.GetRange(12,12));
+                }
             }
             return View(board);
         }

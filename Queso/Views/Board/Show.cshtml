@@ -1,10 +1,45 @@
-﻿
-<h2>
-    @Model.BoardID
-</h2>
-<ul>
+﻿@model Queso.Models.Board
+
+<style>
+    .tile {
+        width: 190px;
+        height: 190px;
+        border: 1px solid #efefef;
+        float: left;
+        margin: 5px 5px;
+    }
+    .tile-header {
+        width: 190px;
+        float: left;
+        margin: 5px 5px;
+        text-align: center;
+        font-size: 50px;
+    }
+    .tile-container {
+        width: 1100px;
+    }
+    .tile:nth-child(18) {
+        background: #ccb8c1;
+    }
+
+
+</style>
+
+<div class="tile-container">
+    
+    <div class="tile-header">Q</div>
+    <div class="tile-header">U</div>
+    <div class="tile-header">E</div>
+    <div class="tile-header">S</div>
+    <div class="tile-header">O</div>
+
     @foreach (var task in Model.Tasks)
     {
-        <li>@task.Name</li>
+        <div class="tile">
+            @task.Name - (@task.Challenge)
+        </div>
     }
-</ul>
+
+
+</div>
+

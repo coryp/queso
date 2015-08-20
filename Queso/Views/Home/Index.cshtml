@@ -1,10 +1,24 @@
-﻿    
-    <h3>@Model.Name</h3>
-    <ul>
-        @foreach (var answer in Model.Answers)
-        {
-            <li>@answer.Message</li>
-        }
-    </ul>
+﻿@model List<Queso.Models.User>
+
+
+
+<form action="/User/Login" method="POST">
+    
+    <div class="col-lg-8">
+
+
+        <select name="UserID" required="required" class="form-control">
+            <option value="">Who are you?</option>
+            @foreach (var user in Model)
+            {
+                <option value="@user.UserID">@user.Name</option>
+            }
+        </select>
+    </div>
+    <div class="col-lg-4">
+        <input type="submit" class="form-control btn btn-primary" />
+    </div>
+</form>
+
 
 

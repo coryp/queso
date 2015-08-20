@@ -85,12 +85,6 @@ C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.csproj.GenerateRe
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.addboardtask.resources
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.addboardtaskmodel.resources
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.addboardtaskmodelset.resources
-C:\Users\cpatterson\Working\Github\Queso\Queso\bin\System.Net.Http.Formatting.dll
-C:\Users\cpatterson\Working\Github\Queso\Queso\bin\System.Web.Http.dll
-C:\Users\cpatterson\Working\Github\Queso\Queso\bin\System.Web.Http.WebHost.dll
-C:\Users\cpatterson\Working\Github\Queso\Queso\bin\System.Net.Http.Formatting.xml
-C:\Users\cpatterson\Working\Github\Queso\Queso\bin\System.Web.Http.xml
-C:\Users\cpatterson\Working\Github\Queso\Queso\bin\System.Web.Http.WebHost.xml
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.no0idea.resources
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.answertoboardtask.resources
 C:\Users\cpatterson\Working\Github\Queso\Queso\obj\Debug\Queso.Migrations.morerelationships.resources

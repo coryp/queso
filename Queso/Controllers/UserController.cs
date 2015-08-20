@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -8,19 +7,19 @@ using Queso.Models;
 
 namespace Queso.Controllers
 {
-    public class HomeController : Controller
+    public class UserController : Controller
     {
-        public ActionResult Index()
+
+ 
+
+        [HttpPost]
+        public ActionResult Login(int UserID)
         {
-
-            List<User> users;
-
             using (var db = new QuesoContext())
             {
-                users = db.Users.ToList();
+                Session["UserID"] = db.Users.Find(UserID).UserID;
+                return Redirect("/Board");
             }
-
-            return View(users);
         }
     }
 }
