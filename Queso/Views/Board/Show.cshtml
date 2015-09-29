@@ -35,11 +35,51 @@
 
     @foreach (var task in Model.Tasks)
     {
-        <div class="tile">
+        <div class="tile" taskId="@task.TaskID">
             @task.Name - (@task.Challenge)
         </div>
     }
 
 
 </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="answerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <form method="POST" action="/Board/Answer">
+        <input id="TaskID" type="hidden" name="TaskID" />
+        <input type="hidden" name="UserID" value="@Session["UserID"]"/>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">What say you?</h4>
+                </div>
+                <div class="modal-body">
+                    <label>Case Number</label>
+                    <input type="text" name="CaseNumber" class="form-control" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" value="Save changes">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+<script language="javascript">
+    $('document').ready(function () {
+        $('.tile').click(function () {
+            var taskId = $(this).attr("taskId");
+            $('#TaskID').val(taskId);
+            $('#answerModal').modal('show');
+        });
+    });
+</script>
 

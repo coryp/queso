@@ -375,6 +375,7 @@
     <Content Include="Views\Board\Show.cshtml" />
     <Content Include="Views\Board\New.cshtml" />
     <Content Include="Views\Shared\_navbar.cshtml" />
+    <Content Include="Views\Board\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using DotNetOpenAuth.Messaging;
 using Queso.Models;
@@ -27,7 +25,7 @@ namespace Queso.Controllers
             using (var db = new QuesoContext())
             {
                 //board = db.Boards.Find(id);
-                board = db.Boards.Include("Tasks").Where(x => x.BoardID == id).FirstOrDefault();
+                board = db.Boards.Include("Tasks").FirstOrDefault(x => x.BoardID == id);
 
                 if (board != null)
                 {
@@ -38,6 +36,17 @@ namespace Queso.Controllers
                     board.Tasks.Add(temp.Last());
                     board.Tasks.AddRange(temp.GetRange(12,12));
                 }
+            }
+
+            return View(board);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            Board board;
+            using (var db = new QuesoContext())
+            {
+                board = db.Boards.FirstOrDefault(x => x.BoardID == id);
             }
             return View(board);
         }
@@ -70,6 +79,26 @@ namespace Queso.Controllers
         public ActionResult Create()
         {
             return null;
+        }
+
+        [HttpPost]
+        public ActionResult Answer(int UserID, int TaskID, string CaseNumber)
+        {
+            using (var db = new QuesoContext())
+            {
+                var task = db.Tasks.Where(x => x.TaskID == TaskID).FirstOrDefault();
+                var user = db.Users.Where(x => x.UserID == UserID).FirstOrDefault();
+                
+                var answer = new Answer();
+                answer.Task = task;
+                answer.User = user;
+                answer.CreatedAt = System.DateTime.Now;
+                answer.CaseNumber = CaseNumber;
+
+                db.Answers.Add(answer);
+                db.SaveChanges();
+            }
+            return Redirect("/Board");
         }
     }
 }

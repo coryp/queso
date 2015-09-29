@@ -1,0 +1,11 @@
+Tile functions
+ - click to answer, should prompt for answer
+ - remove answer
+ - visually indicate answered state
+ - show other user's initials who have answered
+
+- location to create new board (done)
+- create new board should make previous board as inactive
+
+- admin page to add / edit / remove tasks
+
